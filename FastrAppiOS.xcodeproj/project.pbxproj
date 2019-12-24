@@ -7,27 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E3804DE23A09FBA00870DF7 /* FaceTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E3804DD23A09FBA00870DF7 /* FaceTestViewController.xib */; };
+		8E3804E023A09FFD00870DF7 /* FaceTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3804DF23A09FFD00870DF7 /* FaceTestViewController.swift */; };
 		8EA24DC723962E0500A9AC00 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA24DC623962E0500A9AC00 /* AppDelegate.swift */; };
-		8EA24DC923962E0500A9AC00 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA24DC823962E0500A9AC00 /* RootViewController.swift */; };
-		8EA24DCB23962E0500A9AC00 /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA24DCA23962E0500A9AC00 /* DataViewController.swift */; };
-		8EA24DCD23962E0500A9AC00 /* ModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA24DCC23962E0500A9AC00 /* ModelController.swift */; };
 		8EA24DD023962E0500A9AC00 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EA24DCE23962E0500A9AC00 /* Main.storyboard */; };
 		8EA24DD223962E0700A9AC00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EA24DD123962E0700A9AC00 /* Assets.xcassets */; };
 		8EA24DD523962E0700A9AC00 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EA24DD323962E0700A9AC00 /* LaunchScreen.storyboard */; };
 		8EA24DDD2396344C00A9AC00 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 8EA24DDC2396344C00A9AC00 /* .gitignore */; };
+		8ED6189023B18383008619EF /* ArmsTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED6188F23B18383008619EF /* ArmsTestViewController.swift */; };
+		8ED6189223B1839F008619EF /* ArmsTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8ED6189123B1839F008619EF /* ArmsTestViewController.xib */; };
+		8ED6189423B18654008619EF /* SpeakTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED6189323B18654008619EF /* SpeakTestViewController.swift */; };
+		8ED6189623B18662008619EF /* SpeakTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8ED6189523B18662008619EF /* SpeakTestViewController.xib */; };
+		8ED6189823B18B35008619EF /* TimeTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED6189723B18B35008619EF /* TimeTestViewController.swift */; };
+		8ED6189A23B18B3F008619EF /* TimeTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8ED6189923B18B3F008619EF /* TimeTestViewController.xib */; };
+		8EF4934623A8A0EE004E1166 /* TestsPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF4934523A8A0EE004E1166 /* TestsPageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8E3804DD23A09FBA00870DF7 /* FaceTestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FaceTestViewController.xib; sourceTree = "<group>"; };
+		8E3804DF23A09FFD00870DF7 /* FaceTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceTestViewController.swift; sourceTree = "<group>"; };
 		8EA24DC323962E0500A9AC00 /* FastrAppiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FastrAppiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EA24DC623962E0500A9AC00 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8EA24DC823962E0500A9AC00 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
-		8EA24DCA23962E0500A9AC00 /* DataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
-		8EA24DCC23962E0500A9AC00 /* ModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelController.swift; sourceTree = "<group>"; };
 		8EA24DCF23962E0500A9AC00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8EA24DD123962E0700A9AC00 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8EA24DD423962E0700A9AC00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8EA24DD623962E0700A9AC00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8EA24DDC2396344C00A9AC00 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		8ED6188F23B18383008619EF /* ArmsTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArmsTestViewController.swift; sourceTree = "<group>"; };
+		8ED6189123B1839F008619EF /* ArmsTestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArmsTestViewController.xib; sourceTree = "<group>"; };
+		8ED6189323B18654008619EF /* SpeakTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeakTestViewController.swift; sourceTree = "<group>"; };
+		8ED6189523B18662008619EF /* SpeakTestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpeakTestViewController.xib; sourceTree = "<group>"; };
+		8ED6189723B18B35008619EF /* TimeTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTestViewController.swift; sourceTree = "<group>"; };
+		8ED6189923B18B3F008619EF /* TimeTestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimeTestViewController.xib; sourceTree = "<group>"; };
+		8EF4934523A8A0EE004E1166 /* TestsPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestsPageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +53,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8E3804DC23A09F7500870DF7 /* Face */ = {
+			isa = PBXGroup;
+			children = (
+				8E3804DD23A09FBA00870DF7 /* FaceTestViewController.xib */,
+				8E3804DF23A09FFD00870DF7 /* FaceTestViewController.swift */,
+			);
+			path = Face;
+			sourceTree = "<group>";
+		};
 		8EA24DBA23962E0500A9AC00 = {
 			isa = PBXGroup;
 			children = (
@@ -60,17 +81,46 @@
 		8EA24DC523962E0500A9AC00 /* FastrAppiOS */ = {
 			isa = PBXGroup;
 			children = (
+				8EFA328323A97C0900639915 /* Results */,
+				8EFA328223A97C0300639915 /* Speak */,
+				8EFA328123A97BFC00639915 /* Arms */,
+				8E3804DC23A09F7500870DF7 /* Face */,
 				8EA24DC623962E0500A9AC00 /* AppDelegate.swift */,
-				8EA24DC823962E0500A9AC00 /* RootViewController.swift */,
-				8EA24DCA23962E0500A9AC00 /* DataViewController.swift */,
-				8EA24DCC23962E0500A9AC00 /* ModelController.swift */,
 				8EA24DCE23962E0500A9AC00 /* Main.storyboard */,
+				8EF4934523A8A0EE004E1166 /* TestsPageViewController.swift */,
 				8EA24DDC2396344C00A9AC00 /* .gitignore */,
 				8EA24DD123962E0700A9AC00 /* Assets.xcassets */,
 				8EA24DD323962E0700A9AC00 /* LaunchScreen.storyboard */,
 				8EA24DD623962E0700A9AC00 /* Info.plist */,
 			);
 			path = FastrAppiOS;
+			sourceTree = "<group>";
+		};
+		8EFA328123A97BFC00639915 /* Arms */ = {
+			isa = PBXGroup;
+			children = (
+				8ED6188F23B18383008619EF /* ArmsTestViewController.swift */,
+				8ED6189123B1839F008619EF /* ArmsTestViewController.xib */,
+			);
+			path = Arms;
+			sourceTree = "<group>";
+		};
+		8EFA328223A97C0300639915 /* Speak */ = {
+			isa = PBXGroup;
+			children = (
+				8ED6189323B18654008619EF /* SpeakTestViewController.swift */,
+				8ED6189523B18662008619EF /* SpeakTestViewController.xib */,
+			);
+			path = Speak;
+			sourceTree = "<group>";
+		};
+		8EFA328323A97C0900639915 /* Results */ = {
+			isa = PBXGroup;
+			children = (
+				8ED6189723B18B35008619EF /* TimeTestViewController.swift */,
+				8ED6189923B18B3F008619EF /* TimeTestViewController.xib */,
+			);
+			path = Results;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -132,8 +182,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				8EA24DDD2396344C00A9AC00 /* .gitignore in Resources */,
+				8ED6189A23B18B3F008619EF /* TimeTestViewController.xib in Resources */,
+				8ED6189623B18662008619EF /* SpeakTestViewController.xib in Resources */,
+				8ED6189223B1839F008619EF /* ArmsTestViewController.xib in Resources */,
 				8EA24DD523962E0700A9AC00 /* LaunchScreen.storyboard in Resources */,
 				8EA24DD223962E0700A9AC00 /* Assets.xcassets in Resources */,
+				8E3804DE23A09FBA00870DF7 /* FaceTestViewController.xib in Resources */,
 				8EA24DD023962E0500A9AC00 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -145,9 +199,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8EA24DC923962E0500A9AC00 /* RootViewController.swift in Sources */,
-				8EA24DCD23962E0500A9AC00 /* ModelController.swift in Sources */,
-				8EA24DCB23962E0500A9AC00 /* DataViewController.swift in Sources */,
+				8EF4934623A8A0EE004E1166 /* TestsPageViewController.swift in Sources */,
+				8ED6189823B18B35008619EF /* TimeTestViewController.swift in Sources */,
+				8ED6189423B18654008619EF /* SpeakTestViewController.swift in Sources */,
+				8E3804E023A09FFD00870DF7 /* FaceTestViewController.swift in Sources */,
+				8ED6189023B18383008619EF /* ArmsTestViewController.swift in Sources */,
 				8EA24DC723962E0500A9AC00 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
