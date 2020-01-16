@@ -11,7 +11,7 @@
         <!--Tests Page View Controller-->
         <scene sceneID="jV7-gt-flH">
             <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" pageSpacing="2" navigationOrientation="horizontal" spineLocation="none" id="ACh-Ca-pGO" customClass="TestsPageViewController" customModule="FastrAppiOS" customModuleProvider="target" sceneMemberID="viewController"/>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="ACh-Ca-pGO" customClass="TestsPageViewController" customModule="FastrAppiOS" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bYB-A9-xmE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="759" y="-263"/>

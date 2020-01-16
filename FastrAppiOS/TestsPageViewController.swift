@@ -15,6 +15,7 @@ class TestsPageViewController : UIPageViewController {
                                                      ArmsTestViewController(),
                                                      SpeakTestViewController(),
                                                      TimeTestViewController()]
+    var currentPageIndex = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,15 +28,16 @@ class TestsPageViewController : UIPageViewController {
 
 extension TestsPageViewController : UIPageViewControllerDataSource {
     
-    
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
         
         guard let index = orderedViewController.firstIndex(of: viewController) else {
             return nil
         }
-        let indexToShow = (index + 1 == orderedViewController.count) ? orderedViewController.count - 1 : index + 1
-        
-        return orderedViewController[indexToShow]
+        if(index == orderedViewController.count - 1){
+            return nil;
+        }else{
+            return orderedViewController[index+1]
+        }
         
     }
     
@@ -43,8 +45,27 @@ extension TestsPageViewController : UIPageViewControllerDataSource {
          guard let index = orderedViewController.firstIndex(of: viewController) else {
                    return nil
                }
-               
-        return orderedViewController[index]
+        if(index == 0){
+            return nil;
+        }else{
+            return orderedViewController[index-1]
+        }
+    }
+    
+    func pageViewController(pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
+        // 1
+        if completed{
+          // 2
+            self.currentPageIndex = orderedViewController.index(of: previousViewControllers.first)!
+        }
+    }
+    
+    func presentationCount(for pageViewController: UIPageViewController) -> Int {
+        return orderedViewController.count
+    }
+    
+    func presentationIndex(for pageViewController: UIPageViewController) -> Int {
+        return 1
     }
 }
 
