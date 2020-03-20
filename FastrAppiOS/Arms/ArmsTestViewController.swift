@@ -11,13 +11,10 @@ import UIKit
 
 class ArmsTestViewController : UIViewController {
     
-    var pageTitle = "Arms Test"
-    
     @IBOutlet weak var pageLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        pageLabel.text = pageTitle
     }
     
 }

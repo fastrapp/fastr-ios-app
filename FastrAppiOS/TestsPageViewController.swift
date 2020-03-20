@@ -28,6 +28,17 @@ class TestsPageViewController : UIPageViewController {
 
 extension TestsPageViewController : UIPageViewControllerDataSource {
     
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
+         guard let index = orderedViewController.firstIndex(of: viewController) else {
+                   return nil
+               }
+        if(index == 0){
+            return nil;
+        }else{
+            return orderedViewController[index-1]
+        }
+    }
+    
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
         
         guard let index = orderedViewController.firstIndex(of: viewController) else {
@@ -41,23 +52,7 @@ extension TestsPageViewController : UIPageViewControllerDataSource {
         
     }
     
-    func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
-         guard let index = orderedViewController.firstIndex(of: viewController) else {
-                   return nil
-               }
-        if(index == 0){
-            return nil;
-        }else{
-            return orderedViewController[index-1]
-        }
-    }
-    
     func pageViewController(pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
-        // 1
-        if completed{
-          // 2
-            self.currentPageIndex = orderedViewController.index(of: previousViewControllers.first)!
-        }
     }
     
     func presentationCount(for pageViewController: UIPageViewController) -> Int {
@@ -65,7 +60,7 @@ extension TestsPageViewController : UIPageViewControllerDataSource {
     }
     
     func presentationIndex(for pageViewController: UIPageViewController) -> Int {
-        return 1
+        return 0
     }
 }
 
