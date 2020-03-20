@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		8E3804DE23A09FBA00870DF7 /* FaceTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E3804DD23A09FBA00870DF7 /* FaceTestViewController.xib */; };
 		8E3804E023A09FFD00870DF7 /* FaceTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3804DF23A09FFD00870DF7 /* FaceTestViewController.swift */; };
+		8E6CEC082404F1CB0050BD9C /* images.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E6CEC072404F1CB0050BD9C /* images.png */; };
 		8EA24DC723962E0500A9AC00 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA24DC623962E0500A9AC00 /* AppDelegate.swift */; };
 		8EA24DD023962E0500A9AC00 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EA24DCE23962E0500A9AC00 /* Main.storyboard */; };
 		8EA24DD223962E0700A9AC00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EA24DD123962E0700A9AC00 /* Assets.xcassets */; };
@@ -26,6 +27,7 @@
 /* Begin PBXFileReference section */
 		8E3804DD23A09FBA00870DF7 /* FaceTestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FaceTestViewController.xib; sourceTree = "<group>"; };
 		8E3804DF23A09FFD00870DF7 /* FaceTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceTestViewController.swift; sourceTree = "<group>"; };
+		8E6CEC072404F1CB0050BD9C /* images.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = images.png; sourceTree = "<group>"; };
 		8EA24DC323962E0500A9AC00 /* FastrAppiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FastrAppiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EA24DC623962E0500A9AC00 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8EA24DCF23962E0500A9AC00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -62,9 +64,18 @@
 			path = Face;
 			sourceTree = "<group>";
 		};
+		8E6CEC062404F1A50050BD9C /* image_assets */ = {
+			isa = PBXGroup;
+			children = (
+				8E6CEC072404F1CB0050BD9C /* images.png */,
+			);
+			path = image_assets;
+			sourceTree = "<group>";
+		};
 		8EA24DBA23962E0500A9AC00 = {
 			isa = PBXGroup;
 			children = (
+				8E6CEC062404F1A50050BD9C /* image_assets */,
 				8EA24DC523962E0500A9AC00 /* FastrAppiOS */,
 				8EA24DC423962E0500A9AC00 /* Products */,
 			);
@@ -181,6 +192,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E6CEC082404F1CB0050BD9C /* images.png in Resources */,
 				8EA24DDD2396344C00A9AC00 /* .gitignore in Resources */,
 				8ED6189A23B18B3F008619EF /* TimeTestViewController.xib in Resources */,
 				8ED6189623B18662008619EF /* SpeakTestViewController.xib in Resources */,
