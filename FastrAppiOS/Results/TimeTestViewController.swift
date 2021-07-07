@@ -11,7 +11,7 @@ import UIKit
 
 class TimeTestViewController : UIViewController {
     
-    var pageTitle = "Time Results"
+    var pageTitle = "Tap your finger on the button below"
     @IBOutlet weak var pageLabel: UILabel!
     
     override func viewDidLoad() {

@@ -22,6 +22,8 @@
 		8ED6189823B18B35008619EF /* TimeTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED6189723B18B35008619EF /* TimeTestViewController.swift */; };
 		8ED6189A23B18B3F008619EF /* TimeTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8ED6189923B18B3F008619EF /* TimeTestViewController.xib */; };
 		8EF4934623A8A0EE004E1166 /* TestsPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF4934523A8A0EE004E1166 /* TestsPageViewController.swift */; };
+		BE9192EA2694DCC1002D48C0 /* BalanceTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9192E92694DCC1002D48C0 /* BalanceTestViewController.swift */; };
+		BE9192ED2694DD11002D48C0 /* BalanceTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE9192EC2694DD11002D48C0 /* BalanceTestViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		8ED6189723B18B35008619EF /* TimeTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTestViewController.swift; sourceTree = "<group>"; };
 		8ED6189923B18B3F008619EF /* TimeTestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimeTestViewController.xib; sourceTree = "<group>"; };
 		8EF4934523A8A0EE004E1166 /* TestsPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestsPageViewController.swift; sourceTree = "<group>"; };
+		BE9192E92694DCC1002D48C0 /* BalanceTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceTestViewController.swift; sourceTree = "<group>"; };
+		BE9192EC2694DD11002D48C0 /* BalanceTestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BalanceTestViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +96,7 @@
 		8EA24DC523962E0500A9AC00 /* FastrAppiOS */ = {
 			isa = PBXGroup;
 			children = (
+				BE9192E42694D788002D48C0 /* Balance */,
 				8EFA328323A97C0900639915 /* Results */,
 				8EFA328223A97C0300639915 /* Speak */,
 				8EFA328123A97BFC00639915 /* Arms */,
@@ -132,6 +137,15 @@
 				8ED6189923B18B3F008619EF /* TimeTestViewController.xib */,
 			);
 			path = Results;
+			sourceTree = "<group>";
+		};
+		BE9192E42694D788002D48C0 /* Balance */ = {
+			isa = PBXGroup;
+			children = (
+				BE9192E92694DCC1002D48C0 /* BalanceTestViewController.swift */,
+				BE9192EC2694DD11002D48C0 /* BalanceTestViewController.xib */,
+			);
+			path = Balance;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,6 +207,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E6CEC082404F1CB0050BD9C /* images.png in Resources */,
+				BE9192ED2694DD11002D48C0 /* BalanceTestViewController.xib in Resources */,
 				8EA24DDD2396344C00A9AC00 /* .gitignore in Resources */,
 				8ED6189A23B18B3F008619EF /* TimeTestViewController.xib in Resources */,
 				8ED6189623B18662008619EF /* SpeakTestViewController.xib in Resources */,
@@ -213,6 +228,7 @@
 			files = (
 				8EF4934623A8A0EE004E1166 /* TestsPageViewController.swift in Sources */,
 				8ED6189823B18B35008619EF /* TimeTestViewController.swift in Sources */,
+				BE9192EA2694DCC1002D48C0 /* BalanceTestViewController.swift in Sources */,
 				8ED6189423B18654008619EF /* SpeakTestViewController.swift in Sources */,
 				8E3804E023A09FFD00870DF7 /* FaceTestViewController.swift in Sources */,
 				8ED6189023B18383008619EF /* ArmsTestViewController.swift in Sources */,
