@@ -12,8 +12,11 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ArmsTestViewController" customModule="FastrAppiOS" customModuleProvider="target">
             <connections>
                 <outlet property="pageLabel" destination="Gic-7k-IdC" id="etR-fH-um3"/>
-                <outlet property="startButton" destination="Vip-sn-FvM" id="zDt-Bp-r11"/>
+                <outlet property="startButton" destination="Vip-sn-FvM" id="Ngz-eH-QZC"/>
+                <outlet property="tapsRemainingLabel" destination="StZ-Al-UvH" id="Y1r-1A-N5K"/>
                 <outlet property="testButton" destination="tPr-NG-dD0" id="lE9-7O-g3Q"/>
+                <outlet property="testLButton" destination="OpW-PN-Yhc" id="SoA-uc-JAf"/>
+                <outlet property="testRButton" destination="dSK-Y3-s2l" id="1gH-SQ-nmE"/>
                 <outlet property="view" destination="iN0-l3-epB" id="2T5-6S-DuV"/>
             </connections>
         </placeholder>
@@ -22,26 +25,26 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Press the start button below. Once the timer begins, tap the button as quickly as you can with your RIGHT hand thumb" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Gic-7k-IdC">
-                    <rect key="frame" x="61" y="75" width="292" height="113"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This will test your hand strength. Use the buttons below to pick testing your left versus your right hand." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Gic-7k-IdC">
+                    <rect key="frame" x="61" y="279" width="292" height="113"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vip-sn-FvM">
-                    <rect key="frame" x="133" y="311" width="148" height="54"/>
+                    <rect key="frame" x="133" y="509" width="148" height="54"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" systemColor="systemGreenColor"/>
                     <state key="normal" title="Start">
                         <color key="titleColor" systemColor="systemBackgroundColor"/>
                     </state>
                     <connections>
-                        <action selector="onButtonTapWithSender:" destination="-1" eventType="touchUpInside" id="dqq-V7-n1A"/>
+                        <action selector="onStartButtonTapWithSender:" destination="-1" eventType="touchUpInside" id="T5z-9Z-IYY"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tPr-NG-dD0">
-                    <rect key="frame" x="174" y="400" width="67" height="49"/>
+                    <rect key="frame" x="174" y="598" width="67" height="49"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" systemColor="systemGreenColor"/>
                     <state key="normal" title="Tap me!">
@@ -49,6 +52,29 @@
                     </state>
                     <connections>
                         <action selector="onTestButtonTapWithSender:" destination="-1" eventType="touchUpInside" id="3r0-bb-z4h"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10 Taps Left" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="StZ-Al-UvH">
+                    <rect key="frame" x="119" y="128" width="176" height="143"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OpW-PN-Yhc">
+                    <rect key="frame" x="87" y="432" width="90" height="60"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Left"/>
+                    <connections>
+                        <action selector="onLeftTapWithSender:" destination="-1" eventType="touchUpInside" id="V0Y-yN-BVu"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dSK-Y3-s2l">
+                    <rect key="frame" x="218" y="432" width="90" height="60"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Right"/>
+                    <connections>
+                        <action selector="onRightTapWithSender:" destination="-1" eventType="touchUpInside" id="Bxg-d0-UMm"/>
                     </connections>
                 </button>
             </subviews>
