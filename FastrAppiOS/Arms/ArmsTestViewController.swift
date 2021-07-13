@@ -9,6 +9,11 @@
 import Foundation
 import UIKit
 
+protocol ArmsTestViewControllerDelegate:class{
+    func didCompleteLeftHandTest(leftFingerTaps:[Double])
+    func didCompleteRightHandTest(rightFingerTaps:[Double])
+}
+
 class ArmsTestViewController : UIViewController {
     
     @IBOutlet weak var pageLabel: UILabel!
@@ -17,11 +22,18 @@ class ArmsTestViewController : UIViewController {
     @IBOutlet weak var tapsRemainingLabel : UILabel!
     @IBOutlet weak var testLButton: UIButton!
     @IBOutlet weak var testRButton:UIButton!
-    //keep track of whether tapping is being done with left versus right hand
-    var rightHand = true
     
+    weak var delegate:ArmsTestViewControllerDelegate?
+    //keep track of whether tapping is being done with left versus right hand
+    var rightHand = false
+    //var leftHand = false
     //keep track of how many times user has tapped the button
     var tapsCounter = 0
+    
+    //need to record 10 taps, but this gives us a buffer
+    //ignore the first 3 taps
+    let numGoalTaps = 15
+    let numIgnore = 3
     
     //keep track of how long in between taps
     var rightTapsInterval = [Double]()
@@ -43,7 +55,15 @@ class ArmsTestViewController : UIViewController {
         }
         
     }
-    
+    func updateLabel(){
+        let instrStub = "Tap the Start button, then proceed to tap the Tap Me button as quickly as you can with your"
+        if(rightHand){
+            pageLabel.text = instrStub + " RIGHT thumb"
+        }
+        else{
+            pageLabel.text = instrStub + " LEFT thumb"
+        }
+    }
     func initializeTest(){
         startButton.isHidden = false
         testButton.isHidden = false
@@ -52,26 +72,35 @@ class ArmsTestViewController : UIViewController {
         testRButton.isEnabled = false
         testLButton.isHidden = true
         testRButton.isHidden = true
-        let instrStub = "Tap the Start button, then proceed to tap the Tap Me button as quickly as you can with your"
-        if(rightHand){
-            pageLabel.text = instrStub + " right thumb"
-        }
-        else{
-            pageLabel.text = instrStub + " left thumb"
-        }
+
+        updateLabel()
     }
     
     func finishTest(){
         tapsCounter = 0
-        testLButton.isHidden = false
-        testLButton.isEnabled = true
-        testRButton.isHidden = false
-        testRButton.isEnabled = true
+        if rightHand{
+            delegate?.didCompleteRightHandTest(rightFingerTaps: rightTapsInterval)
+            testRButton.isEnabled = false
+            testRButton.isHidden = true
+            testLButton.isEnabled = true
+            testLButton.isHidden = false
+            rightHand = false
+        }
+        else{
+            delegate?.didCompleteLeftHandTest(leftFingerTaps: leftTapsInterval)
+            testLButton.isEnabled = false
+            testLButton.isHidden = true
+            testRButton.isEnabled = true
+            testRButton.isHidden = false
+            rightHand = true
+        }
+        
         startButton.isHidden = true
         startButton.isEnabled = true
         testButton.isEnabled = false
         testButton.isHidden = true
         tapsRemainingLabel.isHidden = true
+        updateLabel()
     }
     
     //there has got to be a way to make these one function but i'm not sure how to get the button properties
@@ -93,27 +122,25 @@ class ArmsTestViewController : UIViewController {
     @IBAction func onTestButtonTap (sender: UIButton){
         
         //zero indexed so to get 10 taps actually need to go up to 9
-        if tapsCounter == 0 {
-            lastTime = NSDate.timeIntervalSinceReferenceDate
-            tapsCounter += 1
-        }
-        else if tapsCounter < 9 {
-            let curTime = Date().timeIntervalSinceReferenceDate
+        let curTime = Date().timeIntervalSinceReferenceDate
+        if tapsCounter < numGoalTaps && tapsCounter >= numIgnore && tapsCounter - numIgnore < rightTapsInterval.count {
+            let index = tapsCounter - numIgnore
+            
             if rightHand
             {
-            rightTapsInterval[tapsCounter] = curTime - lastTime
+                rightTapsInterval[index] = curTime - lastTime
             }
             else{
-                leftTapsInterval[tapsCounter] = curTime - lastTime
+                leftTapsInterval[index] = curTime - lastTime
             }
-            tapsCounter += 1
-            lastTime = curTime
         }
-        else if tapsCounter == 9 {
+        else if tapsCounter == numGoalTaps {
             tapsRemainingLabel.text = "All done!"
             finishTest()
         }
-        let tapsLeft = 10 - tapsCounter
+        lastTime = curTime
+        tapsCounter += 1
+        let tapsLeft = numGoalTaps - tapsCounter + 1
         tapsRemainingLabel.text = "\(tapsLeft) Taps Left!"
     }
 }
