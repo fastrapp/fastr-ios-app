@@ -10,17 +10,25 @@ import Foundation
 import UIKit
 
 class TestsPageViewController : UIPageViewController {
-
-    var orderedViewController: [UIViewController] = [FaceTestViewController(),
-                                                     ArmsTestViewController(),
-                                                     SpeakTestViewController(),
-                                                     TimeTestViewController()]
+    
+    let balanceTestView = BalanceTestViewController()
+    let faceTestView = FaceTestViewController()
+    let armsTestView = ArmsTestViewController()
+    let speakTestView = SpeakTestViewController()
+    let timeTestView = TimeTestViewController()
+    
+    var orderedViewController: [UIViewController] = []
     var currentPageIndex = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         dataSource = self
+        balanceTestView.delegate = self
+        orderedViewController.append(faceTestView)
+        orderedViewController.append(balanceTestView)
+        orderedViewController.append(armsTestView)
+        orderedViewController.append(timeTestView)
         self.setViewControllers([orderedViewController[0]], direction: UIPageViewController.NavigationDirection.forward, animated: true, completion: nil)
     }
     
@@ -66,4 +74,11 @@ extension TestsPageViewController : UIPageViewControllerDataSource {
 
 extension TestsPageViewController : UIPageViewControllerDelegate {
     
+}
+
+extension TestsPageViewController : BalanceTestViewControllerDelegate{
+    func didCompleteBalanceTest(hasBalanceChange: Bool) {
+        UserDefaults.standard.setValue(hasBalanceChange, forKey: "hasBalanceChange")
+        print ("Balance Test Successfully recorded")
+    }
 }

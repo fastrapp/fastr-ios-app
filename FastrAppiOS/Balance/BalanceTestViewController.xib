@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BalanceTestViewController" customModule="FastrAppiOS" customModuleProvider="target">
             <connections>
                 <outlet property="pageLabel" destination="BMh-00-Qdu" id="jAX-jB-oP4"/>
+                <outlet property="view" destination="iN0-l3-epB" id="vpJ-c5-sn5"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -20,23 +21,15 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="9w8-oY-A08">
-                    <rect key="frame" x="54" y="409" width="111" height="79"/>
+                    <rect key="frame" x="151" y="338" width="111" height="79"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="Yes"/>
                     <connections>
                         <action selector="onYesButtonTapWithSender:" destination="-1" eventType="touchUpInside" id="cu0-Mm-x7s"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Ngd-4o-Yu1">
-                    <rect key="frame" x="270" y="409" width="111" height="79"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="No"/>
-                    <connections>
-                        <action selector="onNoButtonTapWithSender:" destination="-1" eventType="touchUpInside" id="yVf-WC-Hwt"/>
-                    </connections>
-                </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="clip" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="630" translatesAutoresizingMaskIntoConstraints="NO" id="BMh-00-Qdu">
-                    <rect key="frame" x="-131" y="137" width="630" height="149"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Have you noticed any changes in your balance?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="630" translatesAutoresizingMaskIntoConstraints="NO" id="BMh-00-Qdu">
+                    <rect key="frame" x="20" y="137" width="361" height="149"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <accessibility key="accessibilityConfiguration">
                         <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
@@ -44,10 +37,15 @@
                     <fontDescription key="fontDescription" type="system" pointSize="28"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
-                    <connections>
-                        <outletCollection property="gestureRecognizers" destination="vUN-kp-3ea" id="jCa-Qp-SR0"/>
-                    </connections>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Ngd-4o-Yu1">
+                    <rect key="frame" x="151" y="482" width="111" height="79"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="No"/>
+                    <connections>
+                        <action selector="onNoButtonTapWithSender:" destination="-1" eventType="touchUpInside" id="yVf-WC-Hwt"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
