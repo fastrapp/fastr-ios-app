@@ -48,6 +48,10 @@ class ArmsTestViewController : UIViewController {
         testButton.layer.cornerRadius = 4
         startButton.isHidden = true
         testButton.isHidden = true
+        startButton.showsTouchWhenHighlighted = true
+        testButton.showsTouchWhenHighlighted = true
+        testLButton.showsTouchWhenHighlighted = true
+        testRButton.showsTouchWhenHighlighted = true
         tapsRemainingLabel.isHidden = true
         for _ in 0...10{
             rightTapsInterval.append(-1.0)
@@ -72,7 +76,6 @@ class ArmsTestViewController : UIViewController {
         testRButton.isEnabled = false
         testLButton.isHidden = true
         testRButton.isHidden = true
-
         updateLabel()
     }
     
@@ -117,13 +120,14 @@ class ArmsTestViewController : UIViewController {
         startButton.isHidden = true
         startButton.isEnabled = false
         testButton.isEnabled = true
+        tapsRemainingLabel.text = "15 Taps Left!"
         tapsRemainingLabel.isHidden = false
     }
     @IBAction func onTestButtonTap (sender: UIButton){
         
-        //zero indexed so to get 10 taps actually need to go up to 9
+        //ignore the first couple of taps and the last couple
         let curTime = Date().timeIntervalSinceReferenceDate
-        if tapsCounter < numGoalTaps && tapsCounter >= numIgnore && tapsCounter - numIgnore < rightTapsInterval.count {
+        if tapsCounter < numGoalTaps - 1 && tapsCounter >= numIgnore && tapsCounter - numIgnore < rightTapsInterval.count {
             let index = tapsCounter - numIgnore
             
             if rightHand
@@ -133,14 +137,16 @@ class ArmsTestViewController : UIViewController {
             else{
                 leftTapsInterval[index] = curTime - lastTime
             }
+
         }
-        else if tapsCounter == numGoalTaps {
+        tapsCounter += 1
+        let tapsLeft = numGoalTaps - tapsCounter
+        tapsRemainingLabel.text = "\(tapsLeft) Taps Left!"
+        lastTime = curTime
+        
+        if tapsCounter == numGoalTaps{
             tapsRemainingLabel.text = "All done!"
             finishTest()
         }
-        lastTime = curTime
-        tapsCounter += 1
-        let tapsLeft = numGoalTaps - tapsCounter + 1
-        tapsRemainingLabel.text = "\(tapsLeft) Taps Left!"
     }
 }
