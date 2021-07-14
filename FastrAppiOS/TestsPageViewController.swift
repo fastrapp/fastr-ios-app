@@ -25,6 +25,7 @@ class TestsPageViewController : UIPageViewController {
         
         dataSource = self
         balanceTestView.delegate = self
+        armsTestView.delegate = self
         orderedViewController.append(faceTestView)
         orderedViewController.append(balanceTestView)
         orderedViewController.append(armsTestView)
@@ -81,4 +82,21 @@ extension TestsPageViewController : BalanceTestViewControllerDelegate{
         UserDefaults.standard.setValue(hasBalanceChange, forKey: "hasBalanceChange")
         print ("Balance Test Successfully recorded")
     }
+}
+
+extension TestsPageViewController : ArmsTestViewControllerDelegate{
+    func didCompleteLeftHandTest(leftFingerTaps: [Double]) {
+        UserDefaults.standard.setValue(leftFingerTaps, forKey: "leftFingerTaps")
+        for i in 0...(leftFingerTaps.count - 1){
+            print (leftFingerTaps[i])
+        }
+    }
+    
+    func didCompleteRightHandTest(rightFingerTaps: [Double]) {
+        UserDefaults.standard.setValue(rightFingerTaps, forKey: "rightFingerTaps")
+        for i in 0...(rightFingerTaps.count - 1) {
+            print (rightFingerTaps[i])
+        }
+    }
+    
 }
