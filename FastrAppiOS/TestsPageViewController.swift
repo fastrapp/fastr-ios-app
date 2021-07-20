@@ -19,6 +19,8 @@ class TestsPageViewController : UIPageViewController {
     
     var orderedViewController: [UIViewController] = []
     var currentPageIndex = 0
+    var userDefaultsHelper: UserDefaultHelper?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +32,7 @@ class TestsPageViewController : UIPageViewController {
         orderedViewController.append(balanceTestView)
         orderedViewController.append(armsTestView)
         orderedViewController.append(timeTestView)
+        userDefaultsHelper = UserDefaultHelper()
         self.setViewControllers([orderedViewController[0]], direction: UIPageViewController.NavigationDirection.forward, animated: true, completion: nil)
     }
     
@@ -79,24 +82,17 @@ extension TestsPageViewController : UIPageViewControllerDelegate {
 
 extension TestsPageViewController : BalanceTestViewControllerDelegate{
     func didCompleteBalanceTest(hasBalanceChange: Bool) {
-        UserDefaults.standard.setValue(hasBalanceChange, forKey: "hasBalanceChange")
-        print ("Balance Test Successfully recorded")
+        userDefaultsHelper?.setBalanceResult(result: hasBalanceChange)
     }
 }
 
 extension TestsPageViewController : ArmsTestViewControllerDelegate{
     func didCompleteLeftHandTest(leftFingerTaps: [Double]) {
-        UserDefaults.standard.setValue(leftFingerTaps, forKey: "leftFingerTaps")
-        for i in 0...(leftFingerTaps.count - 1){
-            print (leftFingerTaps[i])
-        }
+        userDefaultsHelper?.setLeftHandTapResult(result: leftFingerTaps)
     }
     
     func didCompleteRightHandTest(rightFingerTaps: [Double]) {
-        UserDefaults.standard.setValue(rightFingerTaps, forKey: "rightFingerTaps")
-        for i in 0...(rightFingerTaps.count - 1) {
-            print (rightFingerTaps[i])
-        }
+        userDefaultsHelper?.setRightHandTapResult(result: rightFingerTaps)
     }
     
 }

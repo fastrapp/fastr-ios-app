@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6A011C0826A69DE600BD2E0A /* UserDefaultsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A011C0726A69DE600BD2E0A /* UserDefaultsHelper.swift */; };
 		8E3804DE23A09FBA00870DF7 /* FaceTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E3804DD23A09FBA00870DF7 /* FaceTestViewController.xib */; };
 		8E3804E023A09FFD00870DF7 /* FaceTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3804DF23A09FFD00870DF7 /* FaceTestViewController.swift */; };
 		8E6CEC082404F1CB0050BD9C /* images.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E6CEC072404F1CB0050BD9C /* images.png */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6A011C0726A69DE600BD2E0A /* UserDefaultsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsHelper.swift; sourceTree = "<group>"; };
 		8E3804DD23A09FBA00870DF7 /* FaceTestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FaceTestViewController.xib; sourceTree = "<group>"; };
 		8E3804DF23A09FFD00870DF7 /* FaceTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceTestViewController.swift; sourceTree = "<group>"; };
 		8E6CEC072404F1CB0050BD9C /* images.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = images.png; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 				8EA24DD123962E0700A9AC00 /* Assets.xcassets */,
 				8EA24DD323962E0700A9AC00 /* LaunchScreen.storyboard */,
 				8EA24DD623962E0700A9AC00 /* Info.plist */,
+				6A011C0726A69DE600BD2E0A /* UserDefaultsHelper.swift */,
 			);
 			path = FastrAppiOS;
 			sourceTree = "<group>";
@@ -228,6 +231,7 @@
 			files = (
 				8EF4934623A8A0EE004E1166 /* TestsPageViewController.swift in Sources */,
 				8ED6189823B18B35008619EF /* TimeTestViewController.swift in Sources */,
+				6A011C0826A69DE600BD2E0A /* UserDefaultsHelper.swift in Sources */,
 				BE9192EA2694DCC1002D48C0 /* BalanceTestViewController.swift in Sources */,
 				8ED6189423B18654008619EF /* SpeakTestViewController.swift in Sources */,
 				8E3804E023A09FFD00870DF7 /* FaceTestViewController.swift in Sources */,
